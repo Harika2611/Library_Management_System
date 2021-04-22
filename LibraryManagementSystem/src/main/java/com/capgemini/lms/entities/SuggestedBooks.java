@@ -19,7 +19,7 @@ public class SuggestedBooks
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="userid")
+	@JoinColumn(name="id")
 	private Users users;
 	private String title;
 	private String subject;

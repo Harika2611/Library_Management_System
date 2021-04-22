@@ -18,7 +18,7 @@ public class DamagedBooks
 
 	private int id;
 	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="bookid")
+	@JoinColumn(name="id")
 	private Books book;
 	private int quantity;
 	private String description;
