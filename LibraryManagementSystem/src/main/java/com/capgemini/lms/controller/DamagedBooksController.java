@@ -13,6 +13,7 @@ import com.capgemini.lms.entities.DamagedBooks;
 import com.capgemini.lms.service.DamagedBooksService;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value="/DamagedBooks")
@@ -42,7 +43,7 @@ public class DamagedBooksController
 	}
 	
 	@GetMapping(value="/ViewDamagedBooksById")
-	public List<DamagedBooks> getAllDamagedBooksById(int id)
+	public Optional<DamagedBooks> getAllDamagedBooksById(int id)
 	{
 		return damagedBooksService.viewDamagedBookById(id);
 	}
